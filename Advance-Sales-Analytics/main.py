@@ -126,7 +126,14 @@ st.set_page_config(
 #LOAD DATA
 #============================
 
-df = pd.read_csv("data/cleaned_sales.csv")
+from pathlib import Path
+import pandas as pd
+
+BASE_DIR = Path(__file__).parent
+
+csv_path = BASE_DIR / "data" / "cleaned_sales.csv"
+
+df = pd.read_csv(csv_path)
 
 #Convert sales column
 df["Sales"] = pd.to_numeric(df["Sales"], errors='coerce')
