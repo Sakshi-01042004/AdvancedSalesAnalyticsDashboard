@@ -263,16 +263,8 @@ if page == "🏠 Dashboard":
 
     st.markdown("---")
 
-    # SIDEBAR NAVIGATION
-    page = st.sidebar.selectbox(
-    "Dashboard Navigation",
-    [
-        "Dashboard",
-        "Sales by Region",
-        "Category Analysis",
-        "Sales Trend"
-    ]
-)
+    
+
     st.markdown("---")
 
     st.subheader("📄 Dataset Preview")
